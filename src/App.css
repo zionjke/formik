@@ -5,7 +5,7 @@
 
 label {
     font-weight: bold;
-    display: flex;
+    display: block;
     margin-bottom: 5px;
 }
 
@@ -16,7 +16,9 @@ label {
 input[type='text'],
 input[type='email'],
 input[type='tel'],
-textarea {
+input[type='password'],
+textarea,
+select {
     display: block;
     width: 400px;
     padding: 6px 12px;
@@ -35,5 +37,10 @@ textarea {
 }
 
 .error {
+    margin-top: 10px;
     color: red;
+}
+
+.form-control-item {
+    display: flex;
 }
