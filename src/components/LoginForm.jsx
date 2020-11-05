@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import {Form, Formik} from "formik";
 import TextError from "./TextError";
 import {FormikControl} from "./FormikControl";
+import {Button} from "@chakra-ui/core";
 
 
 export const LoginForm = (props) => {
@@ -29,18 +30,18 @@ export const LoginForm = (props) => {
                 formik => {
                     return <Form>
                         <FormikControl
-                            control="input"
+                            control="chakrainput"
                             type="email"
                             label="Email"
                             name="email"
                         />
                         <FormikControl
-                            control="input"
+                            control="chakrainput"
                             type="password"
                             label="Password"
                             name="password"
                         />
-                        <button type="submit" disabled={!formik.isValid}>Submit</button>
+                        <Button variant='solid' type="submit" disabled={!formik.isValid}>Submit</Button>
                     </Form>
                 }}
         </Formik>
